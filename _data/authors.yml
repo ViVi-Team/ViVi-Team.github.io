@@ -3,35 +3,35 @@
 advisory_prof:
   name: "Prof. Jane Smith"
   role: "advisory board"
-  avatar: "member.png"
+  avatar: "images/member.png"
   position: "Professor, Medical AI"
 
 leader_john:
   name: "Dr. John Doe"
   role: "research leader"
-  avatar: "member.png"
+  avatar: "images/member.png"
   position: "Group Leader"
 
 member_alice:
   name: "Alice Nguyen"
   role: "member"
-  avatar: "member.png"
+  avatar: "images/member.png"
   position: "PhD Student"
 
 member_bob:
   name: "Bob Tran"
   role: "member"
-  avatar: "member.png"
+  avatar: "images/member.png"
   position: "Master's Student"
 
 collab_linh:
   name: "Linh Le"
   role: "collaborator"
-  avatar: "member.png"
+  avatar: "images/member.png"
   position: "Visiting Researcher"
 
 collab_maria:
   name: "Maria Kovacs"
   role: "collaborator"
-  avatar: "member.png"
+  avatar: "images/member.png"
   position: "External Collaborator"
