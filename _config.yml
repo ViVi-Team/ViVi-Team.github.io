@@ -23,7 +23,7 @@ repository               : "ABC-teams/ABC-teams.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "team-profile.png"
+  avatar           : "images/team-profile.png"
   name             : "VietMed Team"
   pronouns         :
   bio              : "An interdisciplinary medical AI research team focusing on LLMs and VLMs for medical imaging, and healthcare applications."
