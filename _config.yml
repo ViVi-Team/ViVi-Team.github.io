@@ -23,14 +23,15 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
-  pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
-  uri              : # URL
-  email            : "none@example.org" 
+  avatar           : "team-profile.png"
+  name             : "VietMed Team"
+  pronouns         :
+  bio              : "An interdisciplinary medical AI research team focusing on LLMs and VLMs for medical imaging, and healthcare applications."
+  location         : "Vietnam"
+  employer         : "University of Toronto"
+  uri              : 
+  email            : "contact@vietmed.org"
+
 
   # Academic websites
   academia         : # URL
