@@ -1,0 +1,52 @@
+---
+layout: archive
+title: "Team Members"
+permalink: /members/
+author_profile: true
+---
+
+{% include base_path %}
+
+<h2>Advisory Board</h2>
+<div class="team-group">
+  {% assign advisors = site.data.authors | where: "role", "advisory board" %}
+  {% for member in advisors %}
+    <div class="team-member">
+      <strong>{{ member.name }}</strong><br>
+      {{ member.position }}
+    </div>
+  {% endfor %}
+</div>
+
+<h2>Research Leader</h2>
+<div class="team-group">
+  {% assign leaders = site.data.authors | where: "role", "research leader" %}
+  {% for member in leaders %}
+    <div class="team-member">
+      <strong>{{ member.name }}</strong><br>
+      {{ member.position }}
+    </div>
+  {% endfor %}
+</div>
+
+<h2>Members</h2>
+<div class="team-group">
+  {% assign members = site.data.authors | where: "role", "member" %}
+  {% for member in members %}
+    <div class="team-member">
+      <strong>{{ member.name }}</strong><br>
+      {{ member.position }}
+    </div>
+  {% endfor %}
+</div>
+
+<h2>Collaborators</h2>
+<div class="team-group">
+  {% assign collaborators = site.data.authors | where: "role", "collaborator" %}
+  {% for member in collaborators %}
+    <div class="team-member">
+      <strong>{{ member.name }}</strong><br>
+      {{ member.position }}
+    </div>
+  {% endfor %}
+</div>

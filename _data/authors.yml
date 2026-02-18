@@ -1,18 +1,37 @@
 # Authors
+ 
+advisory_prof:
+  name: "Prof. Jane Smith"
+  role: "advisory board"
+  avatar: "member.png"
+  position: "Professor, Medical AI"
 
-Name Name:
-  name        : "Name Name"
-  uri         : "https://name.com"
-  email       : "name@name.com"
-  bio         : "This is the first name."
-  avatar      : "bio-photo-2.jpg"
-  twitter     : "name"
-  google_plus : "Name"
+leader_john:
+  name: "Dr. John Doe"
+  role: "research leader"
+  avatar: "member.png"
+  position: "Group Leader"
 
-Name2 Name2:
-  name        : "Name2 Name2"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
-  avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"
+member_alice:
+  name: "Alice Nguyen"
+  role: "member"
+  avatar: "member.png"
+  position: "PhD Student"
+
+member_bob:
+  name: "Bob Tran"
+  role: "member"
+  avatar: "member.png"
+  position: "Master's Student"
+
+collab_linh:
+  name: "Linh Le"
+  role: "collaborator"
+  avatar: "member.png"
+  position: "Visiting Researcher"
+
+collab_maria:
+  name: "Maria Kovacs"
+  role: "collaborator"
+  avatar: "member.png"
+  position: "External Collaborator"
