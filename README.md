@@ -68,30 +68,101 @@ docker compose up
 
 You should now be able to access the website from `localhost:4000`.
 
-### Using the DevContainer in VS Code
+## What this file explains
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+This README explains, in plain English, how to replace the website content (text, posts, pages), which files to edit, and how to swap or add images so the site will display the updated content when deployed to the web. It intentionally omits local development or build commands.
 
-# Maintenance
+## Which README to edit
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+- The canonical place to store guidance for this repository is the root `README.md` (this file). Edit this file if you want to change high-level instructions or repository-specific notes.
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+## Where to put and replace content
 
-## Bugfixes and enhancements
+This site uses a Jekyll-style source layout (folders that start with `_` and regular markdown files). To change content, edit or add the files below:
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
+- Posts (blog entries): `_posts/YYYY-MM-DD-title.md` — Edit the markdown files here. Keep the filename date and front matter `date:` consistent.
+- Pages: files in the root and `_pages/` (for example, `about.md`, `members.md`, `talks.html`) — edit the markdown or HTML files to change page content.
+- Members (team/person pages): `_members/*.md` — edit the individual member files to change bios, photos, and metadata.
+- Portfolio items: `_portfolio/` — each item is a markdown/html file.
+- Talks / Talks metadata: `_talks/` — edit talk pages or data files used to generate talk listings.
+- Publications: `_publications/` — edit each publication markdown file.
+- Data used across site: `_data/*.yml` (for example `_data/authors.yml`, `navigation.yml`, `ui-text.yml`) — update author names, navigation labels, or site-controlled text here.
+- Site settings and global metadata: `_config.yml` and (if present) `_config_docker.yml` — change site title, URL, description, baseurl, and other global settings.
+- Files for direct download (PDFs, zips): `files/` — upload downloadable assets here; they are referenced as `/files/filename.ext` on the site.
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+Note: Keep front matter at the top of each markdown file (`---` block) correctly populated. Common front matter keys used here include: `title`, `date`, `layout`, `categories`, `tags`, `image` (see image section below), and `excerpt`.
 
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+## How to replace images so changes show on the live site
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+Follow these rules to ensure images are displayed correctly when the site is deployed:
+
+1. Where to place images
+    - Preferred locations (choose one and be consistent):
+      - `assets/images/` — for general site images (recommended).
+      - `images/` — the repository already uses this folder for some theme/example images.
+      - `files/` — for large downloadable assets (PDFs, zip archives), not regular inline images.
+    - You can also place images alongside a page or post (same folder), but prefer `assets/images` for shared images.
+
+2. Filenames and formats
+    - Use lowercase letters, hyphens instead of spaces, and avoid special characters: `team-photo-2025.jpg`.
+    - Prefer modern web formats: WebP for best compression, JPEG for photos, PNG for graphics with transparency. Provide a JPG/PNG fallback if necessary.
+    - Keep file sizes reasonable: aim for 100–400 KB for standard hero images and smaller for thumbnails.
+
+3. How to reference images
+    - In a page or post front matter (recommended for hero/featured images):
+
+      image: /assets/images/your-image.jpg
+
+    - Inline in markdown:
+
+      ![Alternative text](/assets/images/your-inline-image.jpg)
+
+    - In `_data/authors.yml` or other data files, set author image path to `/assets/images/authors/jane-doe.jpg` (or the path you choose).
+
+4. Overwriting vs adding new names
+    - To replace an image without changing references: overwrite the existing file with the same filename and path (commit the new file using the same path). This keeps all links intact.
+    - To add a new image or rename: upload the new file and update all references to the new path (front matter, markdown image links, data files, and include templates if they reference the old name).
+
+5. Update any data files that reference images
+    - If author photos or avatars are referenced in `_data/authors.yml`, update the `avatar` or `image` field to point at the new path.
+    - Check `_includes/` and `_layouts/` for hard-coded image paths used by the theme and update if you replace those files.
+
+6. Caching / CDN notes
+    - If you replace an image but keep the same filename, browsers and CDNs may cache the old image. To avoid stale images, use a new filename and update references, or add a cache-busting query string (if your deployment supports it). Since this README does not cover deployment commands, prefer a filename change when urgent replacement is required.
+
+## Quick file map — what to edit for common tasks
+
+- Change site title, base URL, and global settings: edit `_config.yml`.
+- Change navigation links: edit `_data/navigation.yml` (or `_data/navigation.yml` equivalent in this repo).
+- Update author profiles and their images: edit `_data/authors.yml` and the files in `_members/`.
+- Update a post or add a new post: add/edit files in `_posts/` (use `YYYY-MM-DD-title.md` filenames).
+- Update publications list entries: `_publications/`.
+- Replace theme images (for example images shown in headers or examples): replace files under `images/` or `assets/images/` and update references in `_includes/` or `_layouts/` if needed.
+
+## Small editing checklist (to follow before committing changes)
+
+1. Edit the appropriate markdown or data file listed above.
+2. If you changed or added images, place them in `assets/images/` (or `images/`) and update paths in front matter and `_data` as needed.
+3. If you renamed an image, update every reference that pointed to the old filename.
+4. Keep front matter fields (`title`, `date`, `image`, `layout`) accurate and consistent.
+
+## Helpful tips
+
+- Keep backups or branch your changes if you're doing a large site restructure.
+- Use consistent naming and folders for images to make future replacements easier.
+- For authors/team photos, keep a standard size (e.g., square 400x400px) to avoid layout inconsistencies.
+
+## If you want further edits
+
+If you'd like, I can also:
+- generate a short checklist tailored to a specific page you want to update,
+- update the `_data` files to point to new image names, or
+- create example front matter blocks for new post/page templates.
+
+Files changed in this update
+
+- `README.md` — replaced with this focused guide describing which files to edit and how to replace images for deployment.
+
+Completion summary
+
+I updated the root `README.md` to explain where to edit content and how to handle images so that changes will appear on the live site. If you want, tell me a specific page or image you want replaced and I will update the corresponding files and data entries for you.
