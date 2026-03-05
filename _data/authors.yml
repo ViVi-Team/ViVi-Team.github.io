@@ -35,3 +35,10 @@ collab_maria:
   role: "collaborator"
   avatar: "member.png"
   position: "External Collaborator"
+
+collab_khai:
+  name: "Khai Le-Duc"
+  role: "collaborator"
+  avatar: "member.png"
+  position: "Founder"
+
