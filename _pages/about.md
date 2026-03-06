@@ -7,28 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-Welcome to the official website of **VietMed Research Team**, an academic research group dedicated to advancing artificial intelligence for healthcare and medical sciences.
+Welcome to the official website of **ViVi**, a non-profit research team dedicated to democratizing artificial intelligence for healthcare.
 
-VietMed focuses on developing next-generation **Large Language Models (LLMs)** and **Vision-Language Models (VLMs)** tailored specifically for **medical imaging, clinical data understanding, and computer-assisted diagnosis**. Our goal is to bridge cutting-edge AI research with real-world clinical practice, enabling intelligent systems that are reliable, interpretable, and beneficial for both physicians and patients.
+ViVi focuses on developing next-generation **Multilingual Multimodal Multipurpose models, datasets, and evaluation benchmarks** to support medical AI research. 
 
-Unlike general-purpose AI systems, medical AI requires high accuracy, safety, and explainability. Therefore, our research emphasizes not only model performance but also trustworthiness, robustness, and practical deployment in healthcare environments.
-
----
-
-A data-driven academic research website
-======
-
-This website serves as a central platform to present our research activities, publications, projects, and academic contributions. It is powered by the **Academic Pages** template and hosted on :contentReference[oaicite:0]{index=0} Pages, allowing us to maintain an open, transparent, and reproducible research workflow.
-
-All content is managed using structured Markdown and configuration files. This approach helps us:
-
-- Share publications and preprints  
-- Document research projects and experiments  
-- Archive talks, seminars, and workshops  
-- Provide teaching and learning resources  
-- Maintain an up-to-date academic portfolio for our team  
-
-By separating content from design, we ensure the website remains lightweight, sustainable, and easy to update as our research evolves.
+This website serves as a central platform to present our research activities, publications, and projects. 
 
 ---
 
@@ -56,33 +39,19 @@ Through these efforts, we aim to develop AI tools that can assist clinicians, re
 Our Team
 ======
 
-VietMed is composed of a diverse and international group of:
+ViVi is composed of a diverse and international group of:
 
 - Undergraduate researchers  
 - Master’s students  
 - PhD candidates  
-- Academic mentors and collaborators  
+- Academic mentors and collaborators
+- Industry and business mentors
 
-Our members come from leading universities in Vietnam and internationally, including institutions in **Canada** and **Hungary**. We foster a collaborative environment where students and researchers work closely together, combining expertise in computer science, machine learning, biomedical engineering, and medicine.
+Our members come from leading universities around the world, including institutions in Canada, US, Germany, etc... We foster a collaborative environment where researchers and clinicians work closely together, combining expertise in computer science, machine learning, biomedical engineering, and medicine.
 
-![VietMed Research Team](/images/about-team.png)
+![ViVi Research Team](/images/about-team.png)
 
-We strongly believe that interdisciplinary collaboration is essential for impactful medical AI research.
-
----
-
-Getting started
-======
-
-This website is designed to help visitors easily explore our work. You can browse:
-
-- Publications for our latest research papers  
-- Projects for ongoing developments  
-- Talks and presentations  
-- Teaching materials and resources  
-- Blog posts sharing insights and experiments  
-
-All pages are automatically generated and updated through our repository on :contentReference[oaicite:1]{index=1}, ensuring transparency and version control for our academic outputs.
+We strongly believe that interdisciplinary collaboration is essential for impactful AI research.
 
 ---
 
@@ -98,7 +67,7 @@ We aim to:
 - Enhance healthcare accessibility  
 - Translate research into real-world medical impact  
 
-By combining strong academic foundations with practical applications, VietMed strives to contribute meaningful solutions to global healthcare challenges.
+By combining strong academic foundations with practical applications, ViVi strives to contribute meaningful solutions to global healthcare challenges.
 
 ---
 
