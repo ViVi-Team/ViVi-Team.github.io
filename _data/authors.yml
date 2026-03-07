@@ -1,5 +1,11 @@
 # Authors
- 
+
+founder_Khai:
+  name: "Khai Le-Duc"
+  role: "founder"
+  avatar: "member.png"
+  position: "Founder"
+
 advisory_prof:
   name: "Prof. Jane Smith"
   role: "advisory board"
@@ -36,9 +42,4 @@ collab_maria:
   avatar: "member.png"
   position: "External Collaborator"
 
-collab_khai:
-  name: "Khai Le-Duc"
-  role: "collaborator"
-  avatar: "member.png"
-  position: "Founder"
 
