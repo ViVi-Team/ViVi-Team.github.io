@@ -14,7 +14,7 @@ Welcome to the ViVi Team Members page!
   {% assign leaders = site.data.authors | where: "role", "founder" %}
   {% for member in leaders %}
     <div class="team-member" style="display:inline-block;text-align:center;margin:16px;">
-      <img src="/images/{{ member.avatar }}" alt="{{ member.name }}" style="width:120px;height:120px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px #ccc;" />
+      <img src="/images/members/{{ member.avatar }}" alt="{{ member.name }}" style="width:120px;height:120px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px #ccc;" />
       <div style="margin-top:8px;font-weight:bold;">{{ member.name }}</div>
       {% if member.position %}<div style="font-size:0.95em;color:#666;">{{ member.position }}</div>{% endif %}
     </div>
